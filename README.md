@@ -39,4 +39,4 @@ TRACE 'HTML Entities: Basic HTML Page <code>$(vHTMLENTITIES)</code>'; // Prints 
 ```
 
 ## Supported characters
-The formatting function converts single characters to the formatted equivalent. For some styling functions (linethrough, underline and slashthrough), it uses a preceeding character. The function is limited to the [Windows-1252 character set](https://nl.wikipedia.org/wiki/Windows-1252) (except the 32 control characters).
+The formatting function converts single characters to the formatted equivalent. For some styling functions (linethrough, underline and slashthrough), it uses a preceeding character. The scope of the function is currently limited to the [Windows-1252 character set](https://nl.wikipedia.org/wiki/Windows-1252) (except the 32 control characters).
