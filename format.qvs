@@ -226,40 +226,39 @@ z;z;z;̶z̶;̲z̲;̷z̷;𝚣;𝘇;𝘻;𝙯;z;𝑧;𝐳;𝒛;𝓏;𝔃
 ý;%C3%BD;"&yacute;";̶ý̶;̲ý̲;̷ý̷;𝚢́;𝘆́;𝘺́;𝙮́;ý;𝑦́;𝐲́;𝒚́;𝓎́;𝔂́
 þ;%C3%BE;"&thorn;";̶þ̶;̲þ̲;̷þ̷;þ;þ;þ;þ;þ;þ;þ;þ;þ;þ
 ÿ;%C3%BF;"&yuml;";̶ÿ̶;̲ÿ̲;̷ÿ̷;𝚢̈;𝘆̈;𝘺̈;𝙮̈;ÿ;𝑦̈;𝐲̈;𝒚̈;𝓎̈;𝔂
-
 ' (delimiter is ';');
 
-urlencode:MAPPING LOAD char, urlencode RESIDENT FormatTable;
-htmlentities:MAPPING LOAD char, htmlentities RESIDENT FormatTable;
-linethrough:MAPPING LOAD char, linethrough RESIDENT FormatTable;
-underline:MAPPING LOAD char, underline RESIDENT FormatTable;
-slashtrough:MAPPING LOAD char, slashtrough RESIDENT FormatTable;
-monospace:MAPPING LOAD char, monospace RESIDENT FormatTable;
-sans_bold:MAPPING LOAD char, sans_bold RESIDENT FormatTable;
-sans_italic:MAPPING LOAD char, sans_italic RESIDENT FormatTable;
-sans_bold_italic:MAPPING LOAD char, sans_bold_italic RESIDENT FormatTable;
-serif:MAPPING LOAD char, serif RESIDENT FormatTable;
-serif_italic:MAPPING LOAD char, serif_italic RESIDENT FormatTable;
-serif_bold:MAPPING LOAD char, serif_bold RESIDENT FormatTable;
-serif_bold_italic:MAPPING LOAD char, serif_bold_italic RESIDENT FormatTable;
-script:MAPPING LOAD char, script RESIDENT FormatTable;
-script_bold:MAPPING LOAD char, script_bold RESIDENT FormatTable;
-
-SET urlencode=MapSubstring(urlencode,$1);
-SET htmlentities=MapSubstring(htmlentities,$1);
-SET linethrough=MapSubstring(linethrough,$1);
-SET underline=MapSubstring(underline,$1);
-SET slashtrough=MapSubstring(slashtrough,$1);
-SET monospace=MapSubstring(monospace,$1);
-SET sans_bold=MapSubstring(sans_bold,$1);
-SET sans_italic=MapSubstring(sans_italic,$1);
-SET sans_bold_italic=MapSubstring(sans_bold_italic,$1);
-SET serif=MapSubstring(serif,$1);
-SET serif_italic=MapSubstring(serif_italic,$1);
-SET serif_bold=MapSubstring(serif_bold,$1);
-SET serif_bold_italic=MapSubstring(serif_bold_italic,$1);
-SET script=MapSubstring(script,$1);
-SET script_bold=MapSubstring(script_bold,$1);
+mapformaturlencode:MAPPING LOAD char, urlencode RESIDENT FormatTable;
+mapformathtmlentities:MAPPING LOAD char, htmlentities RESIDENT FormatTable;
+mapformatlinethrough:MAPPING LOAD char, linethrough RESIDENT FormatTable;
+mapformatunderline:MAPPING LOAD char, underline RESIDENT FormatTable;
+mapformatslashtrough:MAPPING LOAD char, slashtrough RESIDENT FormatTable;
+mapformatmonospace:MAPPING LOAD char, monospace RESIDENT FormatTable;
+mapformatsans_bold:MAPPING LOAD char, sans_bold RESIDENT FormatTable;
+mapformatsans_italic:MAPPING LOAD char, sans_italic RESIDENT FormatTable;
+mapformatsans_bold_italic:MAPPING LOAD char, sans_bold_italic RESIDENT FormatTable;
+mapformatserif:MAPPING LOAD char, serif RESIDENT FormatTable;
+mapformatserif_italic:MAPPING LOAD char, serif_italic RESIDENT FormatTable;
+mapformatserif_bold:MAPPING LOAD char, serif_bold RESIDENT FormatTable;
+mapformatserif_bold_italic:MAPPING LOAD char, serif_bold_italic RESIDENT FormatTable;
+mapformatscript:MAPPING LOAD char, script RESIDENT FormatTable;
+mapformatscript_bold:MAPPING LOAD char, script_bold RESIDENT FormatTable;
 
 DROP TABLE FormatTable;
+
+SET urlencode=MapSubstring('mapformaturlencode',$1);
+SET htmlentities=MapSubstring('mapformathtmlentities',$1);
+SET linethrough=MapSubstring('mapformatlinethrough',$1);
+SET underline=MapSubstring('mapformatunderline',$1);
+SET slashtrough=MapSubstring('mapformatslashtrough',$1);
+SET monospace=MapSubstring('mapformatmonospace',$1);
+SET sans_bold=MapSubstring('mapformatsans_bold',$1);
+SET sans_italic=MapSubstring('mapformatsans_italic',$1);
+SET sans_bold_italic=MapSubstring('mapformatsans_bold_italic',$1);
+SET serif=MapSubstring('mapformatserif',$1);
+SET serif_italic=MapSubstring('mapformatserif_italic',$1);
+SET serif_bold=MapSubstring('mapformatserif_bold',$1);
+SET serif_bold_italic=MapSubstring('mapformatserif_bold_italic',$1);
+SET script=MapSubstring('mapformatscript',$1);
+SET script_bold=MapSubstring('mapformatscript_bold',$1);
 
