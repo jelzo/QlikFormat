@@ -17,7 +17,7 @@ open('../format.qvs','w',encoding='utf-8').write(f"""
 FormatTable:
 LOAD * INLINE '
 {csv}
-' (delimiter is ';');
+' (utf8, delimiter is ';');
 
 {mappings}
 
