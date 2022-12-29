@@ -21,13 +21,21 @@ The currently included functions are:
 ```
 $(include=[lib://YOUR_LIBRARY/format.qvs]); // Include the script file
 
-LET output = $(urlencode('input'));
+// In variables
+LET vOutput = $(htmlentities('<html><body>Hello World</body></html>'));
+
+// In (dynamic) load statement
+LOAD $(htmlentities([Input])) AS Output;
+LOAD '<html><body>Hello World</body></html>' AS Input AUTOGENERATE 1;
 ```
 
 ## Testing
 ```
-TRACE URL Encode: http://www.google.com/search?q=$(=urlencode('€5 to $')) // Prints out url with encoded parameters
-TRACE HTML Entities: Basic HTML Page <code>$(=htmlentities('<!doctype html><html lang="en"><head></head><body><!-- your content here... --></body></html>')) // Prints out html with escaped entities
+LET vURLENCODE = $(urlencode('€5 to $'));
+TRACE 'URL Encode: http://www.google.com/search?q=$(vURLENCODE)'; // Prints out url with encoded parameters
+
+LET vHTMLENTITIES = $(htmlentities('<!doctype html><html lang="en"><head></head><body><!-- your content here... --></body></html>'));
+TRACE 'HTML Entities: Basic HTML Page <code>$(vHTMLENTITIES)</code>'; // Prints out html with escaped entities
 ```
 
 ## Supported characters
