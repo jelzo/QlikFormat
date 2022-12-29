@@ -226,7 +226,7 @@ z;z;z;̶z̶;̲z̲;̷z̷;𝚣;𝘇;𝘻;𝙯;z;𝑧;𝐳;𝒛;𝓏;𝔃
 ý;%C3%BD;"&yacute;";̶ý̶;̲ý̲;̷ý̷;𝚢́;𝘆́;𝘺́;𝙮́;ý;𝑦́;𝐲́;𝒚́;𝓎́;𝔂́
 þ;%C3%BE;"&thorn;";̶þ̶;̲þ̲;̷þ̷;þ;þ;þ;þ;þ;þ;þ;þ;þ;þ
 ÿ;%C3%BF;"&yuml;";̶ÿ̶;̲ÿ̲;̷ÿ̷;𝚢̈;𝘆̈;𝘺̈;𝙮̈;ÿ;𝑦̈;𝐲̈;𝒚̈;𝓎̈;𝔂
-' (delimiter is ';');
+' (utf8, delimiter is ';');
 
 mapformaturlencode:MAPPING LOAD char, urlencode RESIDENT FormatTable;
 mapformathtmlentities:MAPPING LOAD char, htmlentities RESIDENT FormatTable;
